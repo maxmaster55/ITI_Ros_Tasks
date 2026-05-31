@@ -17,10 +17,9 @@ ament_target_dependencies(publisher_node rclcpp std_msgs)
 # Subscriber
 add_executable(subscriber_node src/sub_node.cpp)
 ament_target_dependencies(subscriber_node rclcpp std_msgs)
-
-install(TARGETS
-  publisher_node
-  subscriber_node
-  DESTINATION lib/${PROJECT_NAME})
   
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+
 ament_package()
