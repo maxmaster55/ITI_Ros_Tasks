@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>my_robot_nav2</name>
+  <version>0.0.0</version>
+  <description>
+    Session 11: Autonomous Navigation with Nav2.
+    Provides editable launch files and params that wrap nav2_bringup's
+    TurtleBot3 simulation. Edit config/nav2_params.yaml to tune Nav2.
+  </description>
+  <maintainer email="user@todo.todo">User</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Nav2 bringup and the minimal TB3 sim it depends on -->
+  <exec_depend>nav2_bringup</exec_depend>
+  <exec_depend>nav2_minimal_tb3_sim</exec_depend>
+
+  <!-- Map saving -->
+  <exec_depend>nav2_map_server</exec_depend>
+
+  <!-- SLAM -->
+  <exec_depend>slam_toolbox</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
